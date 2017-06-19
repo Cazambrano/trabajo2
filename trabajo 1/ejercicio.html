@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Tienda Online</title>
+
+<META name="author" Content="Carlos Zambrano">
+<META name="description" content="pagina de carcular">
+	<section></section>
+	
+</head>
+<body>		
+
+			<h1>Los Motes de Benito - Tienda Online</h1><br>
+			<p>Cualquier plato a $50: Choclomote, con chicharron</p>
+
+		<table border="2">
+       <tr>
+       	<td >
+       		<img id="img" width="400px" src="indice.jpg">
+       	</td>
+       	
+       	 
+        		<td>
+		       		<table width="100%" align="">
+		       		<form action="">
+		       			
+		       		
+		       			<tr>
+		       				<td>
+		       				# de choclomotes:
+		       				
+		       					 <input  id="numeroChoclo"  size="22"  type="text" onchange="calcular()" onclick="imagen(1)"value="0"></input>
+		       				</td>
+		       			</tr>
+		       			<tr>
+		       				<td align="rigth">
+		       				# de con chicharrón: 
+		       					<input id="numeroChicharon" size="20" type="text" onkeyup="calcular()" onclick="imagen(2)" value="0"  ></input>
+		       				</td>
+		       			</tr>
+		       				<td align="rigth">
+		       				Total: 
+		       					<input id="total" size="33" type="text"></input>
+		       				</td>
+		       			</tr>
+
+		       			</form>
+		       	</table>
+       			
+       		</tr>
+      
+    </table>
+
+<script>
+function calcular() {
+	var u = 0.50;
+	var cho = document.getElementById("numeroChoclo").value;
+	var chi = document.getElementById("numeroChicharon").value;
+	 cho = parseInt(cho);
+	 chi = parseInt(chi);
+	 var l = cho + chi;
+	 document.getElementById("total").value = l;
+
+   
+}
+function imagen(q){
+	if(q=='1'){
+		document.images.img.src="mote.jpg";
+	}
+	if(q=='2'){
+		document.images.img.src="indice.jpg";
+	}
+	
+}
+
+</script>
+</body>
+</html>
